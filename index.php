@@ -8,7 +8,7 @@
     </head>
     <body>
         <?php
-            include('funciones.php');
+            include('acciones.php');
             include('config.php');                 
         ?>
         
@@ -19,20 +19,7 @@
                     <th>Apellido</th>
                     <th>Teléfono</th>
                     <th>Suscripción</th>
-                </tr>
-
-                
-                <tr>
-                    <th> <?= $misUsuarios->name ?> </th>
-                    <th> <?= $misUsuarios->surName ?> </th>
-                    <th> <?= $misUsuarios->phone ?> </th>
-                    <th> <?= $misUsuarios->suscription ?> </th>
-                </tr>
-
-
-                
-
-                
+                </tr>               
             </tbody>
         </table>
 
@@ -44,9 +31,9 @@
         
             <legend>Nuevo usuario</legend>
         
-            <form method="post" action="contact.php">
+            <form method="POST" action="acciones.php">
         
-                <p><label for="name">Nombre </label>
+                <p><label for="name">Nombre</label>
                     <input type="text" name="name" id="name">
                 </p>
         
@@ -55,26 +42,14 @@
                 </p>
         
                 <p><label for="phone">Teléfono</label>
-                    <input type="tel" name="phone" id="phone"></input>
-                </p>
-                
-                <p><span>Suscrito</span>
-                    <div>
-                        <input type="radio" id="yes" name="suscription" value="yes" checked>
-                        <label for="suscription">Si</label>
-                    </div>
-                
-                    <div>
-                        <input type="radio" id="no" name="suscription" value="no">
-                        <label for="suscription">No</label>
-                    </div>
+                    <input type="tel" name="phone" id="phone">
                 </p>
         
-
+        
         
                 <p>
                 
-                    <input type="submit" name="submit" id="submit" value="submit">
+                    <input type="submit" name="submit" id="submit" value="Enviar">
                 
                 </p>
         
